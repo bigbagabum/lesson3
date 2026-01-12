@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { planetOptions } from "./selectOptions";
 import styles from "./SpaceMissionForm.module.css";
 
 function SpaceMissionForm() {
   const [name, setName] = useState("");
   const [planet, setPlanet] = useState("Mars");
+
+  useEffect(() =>{
+    console.log("UseEffect with out dependencies");
+  });
+
+
+  useEffect(() =>{
+    console.log("UseEffect with dependencies of name");
+  }, [name, planet]);
+
 
   return (
     <section className={styles.container}>

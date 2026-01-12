@@ -2,6 +2,7 @@ import "./App.css";
 import Counter from "./components/Counter/Counter";
 import Goodbye from "./components/Goodbye/Goodbye";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
+import RandomDog from "./components/RandomDog/RandomDog";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import Tool from "./components/Tool/Tool";
 
@@ -9,6 +10,8 @@ function App() {
   return <>
    <Goodbye familyName="Smit" score={1}/>;
    <Goodbye familyName="Petrov" score={2}/>;
+
+   <RandomDog />
 
    <ProfileCard avatar="https://i.pravatar.cc/150?img=3" 
    name = "John Smith" 
