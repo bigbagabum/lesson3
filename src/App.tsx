@@ -2,7 +2,7 @@ import "./App.css";
 import Counter from "./components/Counter/Counter";
 import Goodbye from "./components/Goodbye/Goodbye";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
-import SpaceMissionForm from "./components/SpaceMissionForm/SpaseMissionForm";
+import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import Tool from "./components/Tool/Tool";
 
 function App() {
