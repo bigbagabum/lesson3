@@ -15,7 +15,7 @@ export default function RandomDog() {
     fetchDogImage();
   }, []);
   return <div>
-    <h2>RandomDog</h2>
-    <img src={imageUrl} alt="dog" />
+    <h2></h2>
+    <img src={imageUrl} alt="dog" height={300}/>
     </div>;
 }
