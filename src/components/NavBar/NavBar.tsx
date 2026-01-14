@@ -26,6 +26,9 @@ export default function NavBar() {
       <NavLink to={"/contact"} className={s.link}>
         Contact
       </NavLink>
+      <NavLink to={"/profile"} className={s.link}>
+        Profile
+      </NavLink>
     </nav>
   );
 }
