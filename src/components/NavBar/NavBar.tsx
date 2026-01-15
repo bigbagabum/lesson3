@@ -1,4 +1,3 @@
-import { FallbackFragment } from "ethers";
 import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 
@@ -28,6 +27,9 @@ export default function NavBar() {
       </NavLink>
       <NavLink to={"/profile"} className={s.link}>
         Profile
+      </NavLink>
+      <NavLink to="/users" className={s.link}>
+        Users
       </NavLink>
     </nav>
   );
