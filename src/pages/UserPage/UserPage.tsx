@@ -26,6 +26,7 @@ function UserPage() {
 
       <h2>{user.name}</h2>
       <p>{user.email}</p>
+      <img src={user.avatar} alt="avatar" width="100px"/>
     </div>
   );
 }
