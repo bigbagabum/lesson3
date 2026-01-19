@@ -42,6 +42,9 @@ export default function NavBar() {
       <NavLink to={R.SIGNIN} className={s.link}>
         Sign In
       </NavLink>
+      <NavLink to={R.CREATE_CATEGORY} className={s.link}>
+        Create Category
+      </NavLink>
     </nav>
   );
 }

@@ -1,5 +1,7 @@
 import { Formik, Form, Field } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { ROUTES } from "../../shared/routes";
 
 const SigninSchema = Yup.object().shape({
   password: Yup.string()
@@ -9,7 +11,26 @@ const SigninSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
 });
 
-const Signin = () => (
+const fetchLogin = async (credentials: { email: string; password: string }) => {
+  
+    const res = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(credentials),
+    });
+
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
+    else {
+        const {access_token}  = await res.json();
+        localStorage.setItem("access_token", access_token);
+    }
+}
+
+const Signin = () => {
+    const navigate = useNavigate();
+    return (
     <div>
       <h1>Sign In</h1>
       <Formik
@@ -19,6 +40,8 @@ const Signin = () => (
         }}
         validationSchema={SigninSchema}
         onSubmit={(values) => {
+            fetchLogin(values);
+            navigate(ROUTES.PROFILE_DATA);
           // same shape as initial values
           console.log(values);
         }}
@@ -40,6 +63,6 @@ const Signin = () => (
         )}
       </Formik>
     </div>
-  );
+  );}
   
   export default Signin;

@@ -16,5 +16,6 @@ export const ROUTES = {
   NOTFOUND: "*",
   SIGNUP: "signup",
   PRODUCT_LIST: "Productlist",
-  SIGNIN: "signin"
+  SIGNIN: "signin",
+  CREATE_CATEGORY: "categories/create",
 } as const;

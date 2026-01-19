@@ -26,6 +26,7 @@ import { ROUTES as R } from "../shared/routes";
 import { Signup } from "../pages/Signup/Signup";
 import ProductList from "../components/ProductList/ProductList";
 import Signin from "../pages/Signin/Signin";
+import CreateCategory from "../pages/CreateCategory/CreateCategory";
 
 function AppRoutes() {
   return (
@@ -52,7 +53,7 @@ function AppRoutes() {
         <Route path={R.SIGNUP} element={<Signup />} />
         <Route path={R.SIGNIN} element={<Signin />} />
         <Route path={R.PRODUCT_LIST} element={<ProductList />} />
-
+        <Route path={R.CREATE_CATEGORY} element={<CreateCategory />} />
       </Route>
 
       <Route path={R.NOTFOUND} element={<NotFound />} />

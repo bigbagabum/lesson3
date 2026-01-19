@@ -1,4 +1,10 @@
-//rfc
+import { useAuth } from "../../hooks/useAuth";
+
 export default function ProfileData() {
-  return <div>ProfileData</div>;
+  const { user } = useAuth();
+  return (
+    <div>
+      <h1>{user?.email}</h1>
+    </div>
+  );
 }
