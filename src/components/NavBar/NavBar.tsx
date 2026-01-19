@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
+import { ROUTES as R } from "../../shared/routes/index";
 
 export default function NavBar() {
   return (
@@ -10,11 +11,15 @@ export default function NavBar() {
       <NavLink to={"/gender-revel"} className={s.link}>
         Gender revel
       </NavLink>
+
       <NavLink to={"/nationalize"} className={s.link}>
         Nationality
       </NavLink>
       <NavLink to={"/counter"} className={s.link}>
         Counter
+      </NavLink>
+      <NavLink to={R.PRODUCT_LIST} className={s.link}>
+        Products
       </NavLink>
       <NavLink to={"/space-mission"} className={s.link}>
         Space Mission
@@ -30,6 +35,12 @@ export default function NavBar() {
       </NavLink>
       <NavLink to="/users" className={s.link}>
         Users
+      </NavLink>
+      <NavLink to={R.SIGNUP} className={s.link}>
+        Sign Up FREE
+      </NavLink>
+      <NavLink to={R.SIGNIN} className={s.link}>
+        Sign In
       </NavLink>
     </nav>
   );

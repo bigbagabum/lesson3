@@ -23,6 +23,9 @@ import Car from "../pages/Car/Car";
 import UsersList from "../pages/UsersList/UsersList";
 import UserPage from "../pages/UserPage/UserPage";
 import { ROUTES as R } from "../shared/routes";
+import { Signup } from "../pages/Signup/Signup";
+import ProductList from "../components/ProductList/ProductList";
+import Signin from "../pages/Signin/Signin";
 
 function AppRoutes() {
   return (
@@ -40,13 +43,18 @@ function AppRoutes() {
           <Route path={R.PROFILE_DATA} element={<ProfileData />} />
           <Route path={R.PROFILE_SETTINGS} element={<Settings />} />
         </Route>
-        <Route path={R.PRODUCT_PAGE} element={<ProductPage />} />
+        <Route path={R.PRODUCT_PAGE(":id")} element={<ProductPage />} />
 
         <Route path={R.USERS_LIST} element={<UsersList />} />
         <Route path={R.USER_PAGE} element={<UserPage />} />
 
         <Route path={R.CAR_PAGE} element={<Car />} />
+        <Route path={R.SIGNUP} element={<Signup />} />
+        <Route path={R.SIGNIN} element={<Signin />} />
+        <Route path={R.PRODUCT_LIST} element={<ProductList />} />
+
       </Route>
+
       <Route path={R.NOTFOUND} element={<NotFound />} />
     </Routes>
   );
