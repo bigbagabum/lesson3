@@ -13,6 +13,14 @@ const fetchRegister = async (values: SignUpFormValues) => {
     headers: {"Content-Type": "application/json" },
     body: JSON.stringify(values),
   });
+
+if(!res.ok) {
+    throw new Error("Network response was not ok");
+  } else {
+    const data = await res.json();
+    console.log("User registered:", data);
+  }
+
 };
 
 export const Signup = () => {

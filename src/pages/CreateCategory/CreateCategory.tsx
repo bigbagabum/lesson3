@@ -1,4 +1,4 @@
-import { Formik, Form, Field, type FormikHelpers } from "formik";
+import { Formik, Form, Field} from "formik";
 import { ValidationSchema } from "./ValidationSchema";
 import { fetchCreateCategory } from "./api";
 
