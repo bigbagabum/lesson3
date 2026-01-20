@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 import { ROUTES as R } from "../../shared/routes/index";
+import { useCount } from "../../hooks/useCount";
 
 export default function NavBar() {
+  const { count } = useCount();
   return (
     <nav className={s.container}>
+      <span>{count}</span>
       <NavLink to={"/"} className={s.link}>
         Home
       </NavLink>
